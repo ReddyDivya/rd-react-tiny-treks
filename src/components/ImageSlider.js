@@ -25,10 +25,11 @@ const ImageSlider = () => {
     }, [data])
 
   return (
-    <div className="">
-        <h2 className="text-center text-2xl m-4 p-4 font-bold">Image Slider</h2>
-            <Button name="<< Previous" handleClick={handlePreviousImage}/>
-            <div className="flex justify-center">
+    <div className="text-center">
+        <h2 className="text-2xl m-4 p-4 font-bold">Image Slider</h2>
+            <div className="flex justify-between">
+                <Button name="<< Previous" handleClick={handlePreviousImage} css='m-auto'/>
+                <div className="flex justify-center">
                 {
                     images.map((url, index) => 
                         <img key={index} src={url} 
@@ -38,8 +39,10 @@ const ImageSlider = () => {
                         />
                     )
                 }
+                </div>
+                <Button name="Next >>" handleClick={handleNextImage}  css='m-auto'/>
             </div>    
-            <Button name="Next >> " handleClick={handleNextImage}/>
+            
     </div>
   )
 }
