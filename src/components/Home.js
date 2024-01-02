@@ -1,8 +1,8 @@
 import React, {useState, useEffect} from 'react';
 import Button from "./Button";
 import ImageSlider from './ImageSlider';
+import PDFGenerator from './PDFGenerator';
 import { FaToggleOn, FaToggleOff } from "react-icons/fa";
-
 
 const Home = () => {
     const [theme, setTheme] = useState('light');
@@ -34,7 +34,8 @@ const Home = () => {
             <Button name="Auth0"/>
         </div>
 
-        <ImageSlider/>
+        {/* <ImageSlider/> */}
+        <PDFGenerator/>
     </div>)
 
 }
