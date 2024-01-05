@@ -25,7 +25,7 @@ const ImageSlider = () => {
     }, [data])
 
   return (
-    <div className="text-center">
+    <div className="text-center m-8">
         <h2 className="text-2xl m-4 p-4 font-bold">Image Slider</h2>
             <div className="flex justify-between">
                 <Button name="<< Previous" handleClick={handlePreviousImage} css='m-auto'/>

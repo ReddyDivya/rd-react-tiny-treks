@@ -39,7 +39,7 @@ const PDFGenerator = () => {
     };
 
     return (
-    <div className="p-4">
+    <div className="text-center m-8">
         <h2 className="text-3xl font-bold mb-4">PDF Generator</h2>
         <div className="bg-white p-4 shadown-md">
             {/*Content of the PDF*/}
