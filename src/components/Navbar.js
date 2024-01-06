@@ -1,5 +1,6 @@
 import React from 'react';
-import { FaToggleOn, FaToggleOff } from "react-icons/fa";
+import { IoSunny } from "react-icons/io5";
+import { FaMoon } from "react-icons/fa";
 import { Link } from 'react-router-dom'
 
 const Navbar = ({toggleColorTheme, theme}) => {
@@ -45,7 +46,7 @@ const Navbar = ({toggleColorTheme, theme}) => {
               <Link to="/auth">Auth0</Link>
           </li>
           {/*Dark and light theme */}
-          <button className='p-2 font-bold text-sm rounded-lg float-right text-gray-400' onClick={toggleColorTheme}>{theme === 'light' ? <FaToggleOff size={35}/> : <FaToggleOn size={35}/>}</button>
+          <button className='p-2 font-bold text-sm rounded-lg float-right text-gray-400' onClick={toggleColorTheme}>{theme === 'light' ? <FaMoon size={20}/> : <IoSunny size={20}/>}</button>
         </ul>
     </nav>
   )
