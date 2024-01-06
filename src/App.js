@@ -8,10 +8,13 @@ import Navbar from './components/Navbar';
 import Accordion from './components/Accordion';
 import { useEffect, useState } from 'react';
 import Spinner from './components/Spinner';
+import ProgressBar from './components/ProgressBar';
 
 function App() {
   const [theme, setTheme] = useState('light');
+  const [progress, setProgress] = useState(0);
 
+  //dark and light theme
   useEffect(() => {
       if (theme === 'dark') {
           document.documentElement.classList.add('dark');
@@ -20,9 +23,20 @@ function App() {
       }
   }, [theme]);
 
+  //toggle dark and light theme
   const toggleColorTheme = () => {
       setTheme(theme === 'dark' ?  'light' : 'dark' );
   }
+
+  //progress bar
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setProgress((prevProgress) => prevProgress < 100 ? prevProgress + 5 : 100)
+    }, 1000)
+
+    //cleanup when the component is unmounted
+    return () => clearInterval(interval);
+  }, [])
 
   return (
     <Router>
@@ -35,6 +49,7 @@ function App() {
             <Route path="/accordion" element={<Accordion toggleColorTheme={toggleColorTheme} theme={theme}/>}></Route>
             <Route path="/excel-sheet" element={<ExcelSheet/>}></Route>
             <Route path="/spinner" element={<Spinner theme={theme}/>}></Route>
+            <Route path="/progressbar" element={<ProgressBar progress={progress} theme={theme}/>}></Route>
           </Routes>
         </div>
     </Router>

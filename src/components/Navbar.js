@@ -43,6 +43,9 @@ const Navbar = ({toggleColorTheme, theme}) => {
               <Link to="/spinner">Spinner</Link>
           </li>
           <li className="p-2 text-gray-400 hover:bg-gray-700 hover:text-white rounded-md">
+              <Link to="/progressbar">Progress Bar</Link>
+          </li>
+          <li className="p-2 text-gray-400 hover:bg-gray-700 hover:text-white rounded-md">
               <Link to="/modal">Modal</Link>
           </li>
           <li className="p-2 text-gray-400 hover:bg-gray-700 hover:text-white rounded-md">
