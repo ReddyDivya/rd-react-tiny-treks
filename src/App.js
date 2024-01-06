@@ -7,6 +7,7 @@ import ExcelSheet from './components/ExcelSheet';
 import Navbar from './components/Navbar';
 import Accordion from './components/Accordion';
 import { useEffect, useState } from 'react';
+import Spinner from './components/Spinner';
 
 function App() {
   const [theme, setTheme] = useState('light');
@@ -33,6 +34,7 @@ function App() {
             <Route path="/image-slider" element={<ImageSlider/>}></Route>
             <Route path="/accordion" element={<Accordion toggleColorTheme={toggleColorTheme} theme={theme}/>}></Route>
             <Route path="/excel-sheet" element={<ExcelSheet/>}></Route>
+            <Route path="/spinner" element={<Spinner theme={theme}/>}></Route>
           </Routes>
         </div>
     </Router>
