@@ -1,24 +1,11 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 import { FaToggleOn, FaToggleOff } from "react-icons/fa";
 import { Link } from 'react-router-dom'
 
-const Navbar = () => {
-  const [theme, setTheme] = useState('light');
-
-  useEffect(() => {
-      if (theme === 'dark') {
-          document.documentElement.classList.add('dark');
-      } else {
-          document.documentElement.classList.remove('dark');
-      }
-  }, [theme]);
-
-  const toggleColorTheme = () => {
-      setTheme(theme === 'dark' ?  'light' : 'dark' );
-  }
+const Navbar = ({toggleColorTheme, theme}) => {
 
   return (
-    <nav className={`${theme === 'light' ? 'bg-white text-black' : 'bg-slate-800'} p-4 flex justify-between items-center border-b border-slate-800`}>
+    <nav className={`${theme === 'light' ? 'bg-white text-gray-900' : 'bg-gray-900'} p-4 flex justify-between items-center border-b border-gray-600 font-medium`}>
 
         {/* Mobile menu button */}
         <div className="block lg:hidden">
@@ -58,7 +45,7 @@ const Navbar = () => {
               <Link to="/auth">Auth0</Link>
           </li>
           {/*Dark and light theme */}
-          <button className='p-2 font-bold text-sm rounded-lg float-right text-black' onClick={toggleColorTheme}>{theme === 'light' ? <FaToggleOff size={35}/> : <FaToggleOn size={35}/>}</button>
+          <button className='p-2 font-bold text-sm rounded-lg float-right text-gray-400' onClick={toggleColorTheme}>{theme === 'light' ? <FaToggleOff size={35}/> : <FaToggleOn size={35}/>}</button>
         </ul>
     </nav>
   )

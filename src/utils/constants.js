@@ -13,4 +13,17 @@ export const images = [
     "https://images.unsplash.com/photo-1500259783852-0ca9ce8a64dc?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjd8fHRyYXZlbGxpbmd8ZW58MHx8MHx8fDA%3D",
     "https://images.unsplash.com/photo-1612769254949-deb42c1fbbf7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzR8fHRyYXZlbGxpbmd8ZW58MHx8MHx8fDA%3D",
     "https://images.unsplash.com/photo-1566463584131-7194f1a7945e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDd8fHRyYXZlbGxpbmd8ZW58MHx8MHx8fDA%3D",
+];
+
+export const accordionItems = [
+    {
+        index: 1,
+        title : "What is Flowbite?",
+        content: "Flowbite is an open-source library of interactive components built on top of Tailwind CSS including buttons, dropdowns, modals, navbars, and more.Check out this guide to learn how to get started and start developing websites even faster with components on top of Tailwind CSS."
+    },
+    {
+        index: 2,
+        title : "Is there Figma available?",
+        content: "Flowbite is first conceptualized and designed using the Figma software so everything you see in the library has a design equivalent in our Figma file. Check out the Figma design system based on the utility classes from Tailwind CSS and compone"
+    }
 ]
